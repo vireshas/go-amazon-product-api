@@ -18,10 +18,10 @@ _______
 
 		api.AccessKey = ""
 		api.SecretKey = ""
-		api.Host = "webservices.amazon.com"
+		api.Host = "webservices.amazon.in"
 		api.AssociateTag = ""
 
-		result,err := api.ItemSearchByKeyword("sgt+frog")
+		result,err := api.ItemSearchByKeyword("Macbook+air")
 		if (err != nil) {
 			fmt.Println(err)
 		}

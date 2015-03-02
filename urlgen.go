@@ -33,6 +33,7 @@ func (api AmazonProductAPI) genSignAndFetch(Operation string, Parameters map[str
 		return "", err
 	}
 
+
 	resp, err := http.Get(signedurl)
 	if err != nil {
 		return "", err
@@ -62,7 +63,7 @@ func GenerateAmazonUrl(api AmazonProductAPI, Operation string, Parameters map[st
 	values.Add("Operation", Operation)
 	values.Add("Service", "AWSECommerceService")
 	values.Add("AWSAccessKeyId", api.AccessKey)
-	values.Add("Version", "2009-01-01")
+	values.Add("Version", "2011-08-01")
 	values.Add("AssociateTag", api.AssociateTag)
 
 	for k, v := range Parameters {
